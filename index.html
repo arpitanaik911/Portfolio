@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arpita Naik | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(120deg, #f3e7e9 0%, #e3eeff 100%);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #4a90e2, #7b1fa2);
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+
+
+section {
+  margin-bottom: 3rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.cert-provider {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+@keyframes pop-section {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.92);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.07);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1.04);
+  }
+}
+
+    section:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      color: #7b1fa2;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #7b1fa2;
+      padding-bottom: 0.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+
+    footer {
+      background: #4a148c;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    a.links {
+      color: #7b1fa2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.links:hover {
+      text-decoration: underline;
+    }
+
+    /* Certificate section: remove underline from all certificate links by default, show underline on hover */
+    #certifications ul a {
+      text-decoration: none;
+    }
+    #certifications ul a:hover {
+      text-decoration: underline;
+    }
+    /* Always underline System Tron and Infosys Springboard */
+    #certifications .cert-provider {
+      text-decoration: underline;
+      font-weight: 600;
+    }
+
+    .banner-buttons {
+      margin-top: 1rem;
+    }
+
+    .banner-btn {
+      display: inline-block;
+      background: #fff;
+      color: #7b1fa2;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 1.2rem;
+      margin: 0 8px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .banner-btn:hover {
+      background: #ff
+      color: #4a148c;
+    }
+
+    .projects-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .project-box {
+      background: #f8f6fc;
+      border: 2px solid #e1bee7;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(123, 31, 162, 0.07);
+      padding: 1.2rem 1.2rem 1rem 1.2rem;
+      min-width: 260px;
+      max-width: 340px;
+      flex: 1 1 280px;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .tech-stack {
+      display: inline-block;
+      background: #ede7f6;
+      color: #512da8;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 0.18em 0.7em;
+      margin: 0.5em 0 0.2em 0;
+      font-size: 0.98em;
+      box-shadow: 0 1px 4px rgba(123, 31, 162, 0.07);
+      letter-spacing: 0.01em;
+    }
+
+    .project-box:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 6px 18px rgba(123, 31, 162, 0.13);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        max-width: 100%;
+        padding: 0 0.5rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .banner-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.95rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        padding: 1.2rem 0.5rem;
+      }
+
+      header h1 {
+        font-size: 1.3rem;
+      }
+
+      .banner-btn {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.85rem;
+        margin: 0 4px;
+      }
+
+      nav a {
+        margin: 0 4px;
+        font-size: 0.95rem;
+      }
+
+      section {
+        padding: 0.7rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Arpita Naik</h1>
+    <p>Software Engineering Student | AI & ML Enthusiast</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="banner-buttons">
+      <a class="banner-btn" href="https://www.linkedin.com/in/arpita-naik911" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2"
+          style="vertical-align:middle;margin-right:6px;">
+          <path
+            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.034 0 3.595 1.997 3.595 4.59v5.606z" />
+        </svg>
+        LinkedIn
+      </a>
+      <a class="banner-btn" href="https://github.com/arpitanaik911" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#333"
+          style="vertical-align:middle;margin-right:6px;">
+          <path
+            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576 4.765-1.589 8.199-6.085 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+        GitHub
+      </a>
+      <a class="banner-btn" href="https://drive.google.com/file/d/1OCKC93SPuS7BJNGcFr1XVCkpFP6ixzgU/view?usp=drive_link"
+        target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#7b1fa2"
+          style="vertical-align:middle;margin-right:6px;">
+          <path
+            d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13zm-7 11V4c0-.55.45-1 1-1h7v6h6v11c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1z" />
+        </svg>
+        Resume
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a software engineering student at AJ Institute of Engineering and Technology, passionate about solving real-world problems and exploring emerging technologies.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Bachelor of Engineering in Information Science and Engineering</strong> – 8.51 CGPA<br>
+        A J Institute of Engineering and Technology, Mangaluru (Pursuing)</li>
+        <li><strong>Pre-University in the Science stream (Physics, Chemistry, Maths, Computer Science)</strong> – 85%<br>
+        MES Chaitanya PU College, Sirsi</li>
+        <li><strong>High School</strong> – 96%<br>
+        St. Michael’s Convent High School, Dandeli</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>💡 Projects</h2>
+      <div class="projects-list">
+        <div class="project-box">
+          <strong>🌿 AI Plant Disease Detection System</strong><br>
+          Designed and trained a machine learning model using deep learning and image processing to identify plant leaf diseases. Achieved 92% accuracy on a dataset of over 4,000+ images, automating early disease detection and supporting agricultural health.<br>
+          <span class="tech-stack">Python, OpenCV, TensorFlow, Keras</span>
+        </div>
+        <div class="project-box">
+          <strong>👁️‍🗨️ Intelligent Diagnosis of Ophthalmology</strong><br>
+          Developed an AI system to classify retinal diseases using medical images. Utilized CNN-based models to detect conditions like cataract, glaucoma, and diabetic retinopathy, contributing to early-stage diagnosis and remote health support.<br>
+          <span class="tech-stack">Python, TensorFlow, Keras</span>
+        </div>
+        <div class="project-box">
+          <strong>✈️ AI-Powered Travel Assistant Chatbot</strong><br>
+          Built and deployed a chatbot capable of responding to real-time travel queries, including itineraries, bookings, and destination information. Integrated front-end design and external APIs to enhance user interaction, achieving 85% accuracy and reducing response time by 40%.<br>
+          <span class="tech-stack">Python, Flask, Java, HTML, CSS, APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>
+          <a href="https://drive.google.com/file/d/1yjjR0GfRnUrAIWpKlIYCAHSPjFXEtDOX/view?usp=drive_link" target="_blank">• Completed certification in Java-<span class="cert-provider">System Tron</span></a>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1700k6i5OO8ePRUu0nrC1Ewr7AGSrGj7N/view?usp=drive_link" target="_blank">• Completed certification in Web-development -<span class="cert-provider">System Tron</span></a>
+        </li>
+        <li>
+          <a href="https://example.com/sql-python-certificate" target="_blank">• Successfully obtained certificates in Python-<span class="cert-provider">Infosys Springboard</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Python, Java, C, C++, HTML, CSS, JavaScript</li>
+        <li><strong>Frameworks & Tools:</strong> Flask, OpenCV, TensorFlow, Keras, MySQL</li>
+        <li><strong>Soft Skills:</strong> Teamwork, Communication, Decision Making, Active Listening</li>
+        
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a class="links" href="mailto:arpitanaik911@gmail.com">arpitanaik911@gmail.com</a></p>
+      <p>Phone: +91 6363732478</p>
+      <p>LinkedIn: <a class="links" href="https://www.linkedin.com/in/arpita-naik911" target="_blank">linkedin.com/in/arpita-naik911</a>
+      </p>
+      <p>GitHub: <a class="links" href="https://github.com/arpitanaik911" target="_blank">github.com/arpitanaik911</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Arpita Naik. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Smooth scroll for nav
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const section = document.querySelector(link.getAttribute('href'));
+        section.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Fade-in animation on scroll for sections
+    const sections = document.querySelectorAll('section');
+    const observer = new window.IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.18
+    });
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+
+</html>
